@@ -12,5 +12,8 @@
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 user_range = input("Enter a range of letters (e.g., a-z): ")
-
+start_letter, end_letter = user_range.split('-')
+start_character = ord(start_letter)
+end_character = ord(end_letter)
+result_string = ''.join(chr(i) for i in range(ord(start_letter), ord(end_letter) + 1))
 print(result_string)
